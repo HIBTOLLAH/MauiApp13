@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp13.NotesPage"
+             Title="NotesPage">
+    <StackLayout Padding="10">
+        <Label Text="Date" FontAttributes="Bold"/>
+        <DatePicker x:Name="datePicker" />
+
+        <Label Text="Time" FontAttributes="Bold"/>
+        <TimePicker x:Name="timePicker" />
+
+        <Label Text="Note" FontAttributes="Bold"/>
+        <Editor x:Name="noteEditor" HeightRequest="100" />
+
+        <Button Text="Save" Clicked="OnSaveClicked"/>
+        <Button Text="Edit" Clicked="OnEditClicked"/>
+        <Button Text="Delete" Clicked="OnDeleteClicked"/>
+
+        <ListView x:Name="notesListView" ItemSelected="OnNoteSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Note}" Detail="{Binding Date, StringFormat='{0:yyyy-MM-dd}'}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

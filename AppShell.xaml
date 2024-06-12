@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiApp13.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiApp13"
+    Shell.FlyoutBehavior="Flyout"
+    Title="MauiApp13">
+
+    <ShellItem Title="KayitSayfasi" Icon="login.png">
+            <ShellContent
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+        </ShellItem>
+
+    <ShellItem Title="AnaSayfa" Icon="home.png">
+            <ShellContent
+            ContentTemplate="{DataTemplate local:AnaSayfa}"
+            Route="AnaSayfa" />
+        </ShellItem>
+
+    <ShellItem Title="Haberler" Icon="newspaper.png">
+            <ShellContent
+            ContentTemplate="{DataTemplate local:Haberler}"
+            Route="Haberler" />
+        </ShellItem>
+    <ShellItem Title="Ayarlar" Icon="settings.png">
+        <ShellContent
+     ContentTemplate="{DataTemplate local:Ayarlar}"
+     Route="Ayarlar" />
+    </ShellItem>
+    <ShellItem Title="HavaDurumu" Icon="weather.png" >
+        <ShellContent
+  ContentTemplate="{DataTemplate local:HavaDurumu}"
+  Route="HavaDurumu" />
+    </ShellItem>
+    <ShellItem Title="NotesPage" Icon="to_do_list.png">
+        <ShellContent
+ContentTemplate="{DataTemplate local:NotesPage}"
+Route="NotesPage" />
+    </ShellItem>
+    <ShellItem Title="DovizKurlari" Icon="money.png">
+        <ShellContent
+ContentTemplate="{DataTemplate local:DovizKurlari}"
+Route="DovizKurlari" />
+    </ShellItem>
+
+
+
+</Shell>
+
